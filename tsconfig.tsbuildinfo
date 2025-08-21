@@ -1,0 +1,1 @@
+{"root":["./src/app.vue","./src/main.ts","./src/composables/postcard.vue","./src/composables/useposts.ts","./src/router/index.ts","./src/stores/counter.ts","./pages/about.vue","./pages/home.vue","./pages/post.vue","./env.d.ts"],"version":"5.8.3"}

@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello World",
+    "summary": "第一篇示例文章，演示 Markdown 渲染与路由。",
+    "date": "2025-08-21",
+    "tags": ["guide", "intro"]
+  }
+]
