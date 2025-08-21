@@ -1,13 +1,130 @@
-:root { color-scheme: light dark; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-.container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
-.header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; }
-.header a { text-decoration: none; color: inherit; }
-.nav { display: flex; gap: .75rem; }
-.post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
-.tag { display: inline-block; padding: .1rem .5rem; border: 1px solid currentColor; border-radius: 999px; font-size: 12px; opacity: .8; }
-.search { width: 100%; max-width: 360px; padding: .5rem .75rem; border-radius: .5rem; border: 1px solid #8883; background: transparent; }
-hr { border: none; border-top: 1px solid #8883; margin: 1rem 0; }
-.codeblock pre { padding: 1rem; border-radius: .5rem; overflow: auto; }
-.footer { opacity: .7; font-size: .9rem; padding: 2rem 0; }
+:root {
+  color-scheme: light dark;
+}
+* {
+  box-sizing: border-box;
+}
+/* Self-hosted Noto Sans SC */
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("./fonts/NotoSansSC-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("./fonts/NotoSansSC-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("./fonts/NotoSansSC-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav {
+  display: flex;
+  gap: 0.75rem;
+}
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.search {
+  width: 100%;
+  max-width: 360px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #8883;
+  background: transparent;
+}
+hr {
+  border: none;
+  border-top: 1px solid #8883;
+  margin: 1rem 0;
+}
+.codeblock pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+  font-family: "Maple Mono NF", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+.footer {
+  opacity: 0.7;
+  font-size: 0.9rem;
+  padding: 2rem 0;
+}
+/* Markdown content tuning: larger text, tighter spacing */
+.codeblock {
+  font-size: 18px; /* larger than body (16px) */
+  line-height: 1.5; /* slightly tighter */
+}
+.codeblock p {
+  margin: 0.5em 0; /* default ~1em -> tighter */
+}
+.codeblock h1,
+.codeblock h2,
+.codeblock h3,
+.codeblock h4,
+.codeblock h5,
+.codeblock h6 {
+  margin: 0.8em 0 0.4em; /* reduce heading spacing */
+  line-height: 1.25;
+}
+.codeblock ul,
+.codeblock ol {
+  margin: 0.5em 0 0.5em 1.25em; /* tighter list spacing with modest indent */
+}
+.codeblock li {
+  margin: 0.2em 0; /* tighter between items */
+}
+.codeblock blockquote {
+  margin: 0.6em 0;
+  padding-left: 0.9em;
+  border-left: 3px solid #8883;
+}
+@font-face {
+  font-family: "Maple Mono NF";
+  src: url("./fonts/MapleMono[wght]-VF.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
